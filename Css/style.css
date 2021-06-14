@@ -1,144 +1,167 @@
-@media (max-width: 800px) {
-    .container {
-        flex: 100%;
-    }
-
-}
-
-@media screen and (max-width: 600px) {
-    body {
-        height: 130vh;
-        padding: 80px 20px;
-    }
-
-    .container .about-us {
-        flex-direction: column;
-        /*flex-basis: ;*/
-    }
-
-    .container,.about-us,.subscription {
-        border-radius: 0px;
-        /*border-bottom-left-radius: 0px;
-        border-bottom-right-radius: 0px;*/
-        padding-bottom: 40px;
-
-    }
-    .container .about-us .why-us {
-        border-bottom-right-radius: 0px;
-        border-bottom-left-radius: 10px
-    }
-
+:root {
+    --grey-color: hsl(0, 0%, 94%);
+    --white-color: #FFFFFF;
+    --h-color: #2AB2AF;
+    --hh-color: #C0DF34;
+    --p-color: #98A6CC;
+    --sub-color: #09A9AE;
+    --why-color: #2AB2AF;
+    --a-color: #BFDF32;
+    --hover-color: #c6e377;
 }
 
 * {
+    margin: 0px;
+    padding: 0px;
     box-sizing: border-box;
 }
 
 body{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    background: #F0F0F0;
-    font-family: Helvetica,sans-serif;
-}
-
-.container{
-    margin: 80px auto;
-    margin-bottom: 150px;
-    border: none;
-    border-radius: 10px;
-    width: 50%;
-    height: 450px;
+    height:100vh;
     display: flex;
-    /*overflow: hidden;*/
     justify-content: center;
-    align-items: stretch;
-    flex-flow: row wrap;
-    /*text-align: center;*?
-    /*background-color: #FFFFFF;*/
-    box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%);
-
+    align-items: center;
+    font-family: 'Karla', sans-serif;
+    background-color: var(--grey-color);
 }
 
-.container > *{
-    padding: 0px;
-    flex: 1 100%;
+/****************container section*********************/
 
+.container {
+    width: 50%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
+
+
+/***********************community section*****************************/
 
 .container .community{
-    background-color: #FFFFFF;
-    padding: 20px 0 0 30px;
-    flex-basis: 100%;
-    /*height: 50%;*/
+    background-color: var(--white-color);
+    padding: 30px;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
 }
 
+.container .community .top-heading{
+    color: var(--h-color);
+    padding-bottom: 20px;
+}
+
+.container .community .heading2{
+    color: var(--hh-color);
+    padding-bottom: 15px;
+}
+
+.container .community .top-p1, .top-p2 {
+    color: var(--p-color);
+    
+}
+
+.container .community .top-p1{
+    padding-bottom: 10px;
+}
+
 .container .about-us{
     display: flex;
-    /*height: 50%;*/
-  
 }
+
+/********************subscription section**********************/
 
 .container .about-us .subscription{
     flex-basis: 50%;
-    padding-left: 30px;
-    padding-top: 20px;
-    background-color: #2BB3B1;
+    background-color: var(--sub-color);
+    color: var(--grey-color);
     border-bottom-left-radius: 10px;
-    
 }
 
+.container .about-us .subscription h4{
+    color: var(--white-color);
+    padding: 30px 30px 20px 30px;
+}
+
+.container .about-us .subscription p{
+    padding: 0px 30px 15px 30px;
+}
+
+.container .about-us .subscription .dollar{
+    color: var(--white-color);
+    font-weight: bold;
+    font-size: xx-large;
+}
+
+.container .about-us .subscription span{
+    color: var(--p-color);
+}
+
+.container .about-us .subscription a:link, a:visited {
+    background-color: var(--a-color);
+    color: var(--white-color);
+    margin: 10px 30px 30px 30px;
+    padding: 14px 90px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+}
+
+a:hover, a:active {
+    background-color: var(--hover-color);
+}
+
+/************** why us code section***********************/
+
 .container .about-us .why-us{
-    background-color: #4ABEBD;
     flex-basis: 50%;
-    padding-left: 30px;
-    padding-top: 20px;
-    word-break: keep-all;
+    background-color: var(--why-color);
+    color: var(--grey-color);
     border-bottom-right-radius: 10px;
 }
 
-.top-heading{
-    color: #3A9D9C;
+.container .about-us .why-us h4{
+    padding: 30px;
+    color: var(--white-color);
 }
 
-.heading2{
-    color: #CADE65;
+.container .about-us .why-us p{
+    padding: 0px 30px 30px 30px;
 }
 
-.top-p{
-    color: #B1B6C0;
-}
+/*****************Responsiveness******************/
 
-button{
-    border: none;
-    width: 80%;
-    height: 20%;
-    background-color: #BFDF32;
-    border-radius: 5px;
-    text-align: center;
-    box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%);
+@media screen and (max-width: 480px){
+    body{
+        height: 140vh;
+    }
+
+    .container {
+        width: 70%;
+    }
+
+
+    .container .community {
+        flex-basis: 100%;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+    }
+
+    .container .about-us{
+        flex-direction: column;
+    }
     
-}
+    .container .about-us .subscription {
+        border-bottom-left-radius: 0px;
+    }
 
-a{
-    text-decoration: none;
-    color: #E3FFFF;
-    font-weight: bold;
-}
+    .container .about-us .subscription a:link,a:visited{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 
-h3, h4{
-    color: #E3FFFF;
-}
-
-.dollar{
-    color: #FFFFFF;
-    font-weight: bold;
-    font-size: xx-large;
-
-}
-
-p{
-    color: #92E3E4;
+    .container .about-us .why-us {
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+    }
 }
