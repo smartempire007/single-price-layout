@@ -103,12 +103,16 @@ body{
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     text-align: center;
     text-decoration: none;
-    display: inline-block;
+    display: inline-flex;
+    
+
 }
 
 a:hover, a:active {
     background-color: var(--hover-color);
 }
+
+
 
 /************** why us code section***********************/
 
