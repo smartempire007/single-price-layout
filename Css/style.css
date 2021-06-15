@@ -91,7 +91,7 @@ body{
 }
 
 .container .about-us .subscription span{
-    color: var(--p-color);
+    color: var(--grey-color);
 }
 
 .container .about-us .subscription a:link, a:visited {
