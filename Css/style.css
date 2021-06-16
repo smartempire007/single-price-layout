@@ -137,11 +137,11 @@ a:hover, a:active {
 
 @media screen and (max-width: 480px){
     body{
-        height: 140vh;
+        height: 150vh;
     }
 
     .container {
-        width: 70%;
+        width: 90%;
     }
 
 
